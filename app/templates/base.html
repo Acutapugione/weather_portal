@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% if title %}
+            title
+        {% else %}
+            Document
+        {% endif %}
+    </title>
+</head>
+<body>
+    {% block navigation %}
+        <ul>
+            <li>
+                <a href="{{ url_for('index') }}">Головна</a>
+                
+            </li>
+            <li>
+                <a href="{{ url_for('weather') }}">Погода зараз</a>
+            </li>
+            <li>
+                <a href="{{ url_for('forecast') }}">Прогноз на 10 діб</a>
+            </li>
+        </ul>
+    {% endblock %}
+    {% block content %}
+        
+    {% endblock %}
+    {% block footer %}
+        
+    {% endblock %}
+</body>
+</html>
